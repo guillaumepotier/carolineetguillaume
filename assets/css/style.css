@@ -1,0 +1,462 @@
+/**
+ * Name: Pertness - Coming Soon Template
+ * Version: 1.0
+ * Author: web-master72
+**/
+
+/* ---------------------------------------------- /*
+ * General styles
+/* ---------------------------------------------- */
+@font-face {
+  font-family: 'Shelley Allegro BT';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shelley Allegro BT'), local('ShelleyAllegroBT-Regular'), url(../fonts/77918fde284ba4c6d6707bf7855c0e05.woff) format('woff');
+}
+
+body {
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #555;
+}
+
+a { color: #4eaacf; }
+
+a,
+a > * {
+    outline: none;
+}
+
+#coming-soon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.scroll-down > a {
+    color: #fff;
+}
+
+/* Inputs styles
+------------------------------------------------- */
+
+.form-control {
+    border: 2px solid #93bdd8;
+    border: 0;
+     -webkit-box-shadow: none;
+             box-shadow: none;
+
+}
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+/* Default button style
+------------------------------------------------- */
+
+.btn-default {
+    background: #4eaacf;
+    box-shadow: 0 4px 0 #3D97BD;
+    border: 0;
+    width: 100%;
+    color: #fff;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    color: #fff;
+    background-color: #51B2DA;
+}
+
+.btn-default:active {
+    padding: 12px 10px 8px;
+    box-shadow: 0 2px 0 #3D97BD;
+}
+
+.btn-default:focus {
+    outline: none !important;
+}
+
+/* ---------------------------------------------- /*
+ * Basic Structure
+/* ---------------------------------------------- */
+
+.home {
+    background: url(../images/bg.png);
+    padding: 120px 0 180px;
+    text-align: center;
+    color: #fff;
+}
+
+.content {
+    background: #dae9f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-inverse {
+    background: #fff;
+}
+
+/* ---------------------------------------------- /*
+ * Top menu
+/* ---------------------------------------------- */
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 997;
+    background: #3d3d3d;
+    font-size: 18px;
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 0;
+    color: #fff;
+}
+nav a:hover { color: #e8643e; }
+nav a:focus { color: #fff; }
+
+.show-menu, .hide-menu {
+    position: absolute;
+    top: -6px;
+    right: 5%;
+    padding: 0 20px;
+    z-index: 998;
+    text-align: center;
+}
+
+.show-menu a, .hide-menu a {
+    display: inline-block;
+    width: 40px;
+    height: 48px;
+    padding-top: 16px;
+    background: #3d3d3d;
+    font-size: 21px;
+    color: #fff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.show-menu a:hover, .hide-menu a:hover { color: #fff; }
+
+/* ---------------------------------------------- /*
+ * Main
+/* ---------------------------------------------- */
+
+.home p {
+    font-size: 24px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.services-desc {
+    text-align: left;
+}
+
+/* ---------------------------------------------- /*
+ * Features
+/* ---------------------------------------------- */
+
+.features {
+    background: #4eaacf;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #3D97BD;
+    padding: 40px 15px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.features h3 {
+    margin-top: 25px;
+}
+
+.features .fa-inverse {
+    color: #555;
+}
+
+/* ---------------------------------------------- /*
+ * Subscribe and Contact Form
+/* ---------------------------------------------- */
+
+.sb-form {
+    background: #dae9f4;
+    border-radius: 5px;
+    padding: 15px 0 0;
+    overflow: hidden;
+}
+
+.sb-form .btn {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    margin-bottom: 20px;
+}
+
+.contact-form textarea.form-control {
+    height: 178px;
+}
+
+/* ---------------------------------------------- /*
+ * Map
+/* ---------------------------------------------- */
+
+.content-map {
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.gotop {
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    top: -35px;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    background: #fff;
+    border-radius: 50%;
+    border: 3px solid #dae9f4;
+    font-size: 22px;
+    line-height: 64px;
+    text-align: center;
+}
+
+#map {
+    height: 350px;
+}
+
+/* ---------------------------------------------- /*
+ * Typography
+/* ---------------------------------------------- */
+
+h1, h2, h3, h4 {
+    font-family: 'Shelley Allegro BT', cursive;
+    margin: 0 0 10px;
+}
+
+h2, h3, h4 {
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+h1 { font-size: 64px; }
+
+h2 { font-size: 52px; }
+
+h3 { font-size: 28px; }
+
+h4 { font-size: 22px; }
+
+/* ---------------------------------------------- /*
+ * Countdown
+/* ---------------------------------------------- */
+
+#countdown {
+    margin: 60px 0 50px;
+    line-height: 1;
+}
+
+#countdown > div {
+    display: inline-block;
+    margin: 0 5px 5px;
+}
+
+#countdown > div > div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+#countdown > div > i {
+    font-size: 15px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/* Responsive: tablets */
+@media screen and (min-width: 768px) {
+    #countdown > div {
+        display: inline-block;
+        margin: 0 35px 15px;
+    }
+    #countdown > div > div {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 5px 5px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    #countdown > div > i {
+        font-size: 20px;
+    }
+    #countdown > div > div {
+        font-size: 70px;
+    }
+}
+
+/* Responsive: tablets and more */
+@media screen and (min-width: 992px) {
+    #countdown > div {
+        display: inline-block;
+        margin: 0 35px 15px;
+    }
+    #countdown > div > div {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 5px 5px;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    #countdown > div > i {
+        font-size: 30px;
+    }
+    #countdown > div > div {
+        font-size: 110px;
+    }
+}
+
+/* ---------------------------------------------- /*
+ * Preloader
+/* ---------------------------------------------- */
+
+#preloader {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#status, .status-mes {
+    background-image: url(../images/270.GIF);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
+
+.status-mes {
+    background: none;
+    left: 0;
+    margin: 0;
+    padding-left: 12px;
+    text-align: center;
+    top: 65%;
+    font-family: 'Bitter', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #aaa;
+}
+
+/* ---------------------------------------------- /*
+ * Media
+/* ---------------------------------------------- */
+
+@media (max-width: 991px) {
+    .services-desc {
+        text-align: center;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 50px; }
+    h2 { font-size: 38px; }
+    h3 { font-size: 22px; }
+    h4 { font-size: 18px; }
+}
+
+/* ---------------------------------------------- /*
+ * Locations details
+/* ---------------------------------------------- */
+
+.location {
+    margin-top: 25px;
+}
+
+.locationdetails {
+    margin: 20px 0px;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.locationdetails li {
+    list-style-type: none;
+    width: 55%;
+    float: left;
+    padding-left: 0px;
+    background: none;
+}
+
+.locationdetails li:last-child {
+    float: right;
+    width: 30%;
+}
+
+.locationdetails li span {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-top: 8px;
+    width: 10px;
+}
+
+.locationdetails .alignleft {
+    margin: 0px;
+}
+
+.alignleft {
+    float: left;
+    margin: 10px 20px 10px 10px;
+}
+
+.locationdetails h5 {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #818181;
+    line-height: 18px;
+}
+
+.locationdetails p {
+    margin-bottom: 0px;
+}
+
+.popin {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 20px #999;
+    border-radius: 2px;
+}
