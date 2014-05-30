@@ -99,6 +99,10 @@
             menu = false;
         });
     });
+    // hack to avoid fadein fadout glitch when clicking on a menu link
+    $('.menu-link').on('click', function () {
+        menu = false;
+    });
     $(document).scroll(function () {
         if (!menu && $('nav').offset().top >= 700) {
             $('nav').slideDown(100, function(){$('.show-menu a').hide(); });
