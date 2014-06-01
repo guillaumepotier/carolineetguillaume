@@ -417,6 +417,7 @@
          $.ajax({
             url: rootApi + 'messages/send.json',
             type: 'POST',
+            dataType: 'jsonp',
             data: {
                'key': 'qNKHdQ' + key1 + key2,
                'message': {
