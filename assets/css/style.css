@@ -284,15 +284,15 @@ nav a:focus { color: #fff; }
 /* ---------------------------------------------- */
 
 h1, h2, h3, h4 {
-    font-family: 'Shelley Allegro BT', cursive;
+    font-family: 'Tangerine', cursive;
     margin: 0 0 10px;
 }
 
-h1 .esperluette {
+/*h1 .esperluette {
     margin: 0 -5px 0 0;
     font-family: 'Tangerine', cursive;
 }
-
+*/
 h2, h3, h4 {
     font-weight: 700;
 }
@@ -302,7 +302,7 @@ h3, h4 {
     font-weight: 300;
 }
 
-h1 { font-size: 64px; }
+h1 { font-size: 81px; }
 
 h2 { font-size: 52px; }
 
