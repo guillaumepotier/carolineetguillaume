@@ -288,6 +288,11 @@ h1, h2, h3, h4 {
     margin: 0 0 10px;
 }
 
+h1 .esperluette {
+    margin: 0 -5px 0 0;
+    font-family: 'Tangerine', cursive;
+}
+
 h2, h3, h4 {
     font-weight: 700;
 }
@@ -492,4 +497,15 @@ h4 { font-size: 22px; }
     padding: 15px;
     box-shadow: 0 0 20px #999;
     border-radius: 2px;
+}
+
+.btn.active {
+    color: white;
+    font-weight: bold;
+    background: #51B2DA;
+}
+
+.features p a {
+    color: white;
+    text-decoration: underline;
 }
