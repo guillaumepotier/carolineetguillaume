@@ -438,7 +438,16 @@
             alert('Votre message a bien été envoyé !');
             $('form').hide();
          })
-         .fail(function () {
+         .fail(function (xhr, status, message) {
+            // special treatment because we need to add jsonp for IE8
+            // but not supported by Mandrill. Json is not correctly parsable
+            // and we are in this callback, even with 200 status code
+            if (200 === xhr.status) {
+               alert('Votre message a bien été envoyé !');
+               $('form').hide();
+               return;
+            }
+
             alert('Une erreur s\'est produite :( Veuillez réessayer, si le souci persiste, merci d\'envoyer directement votre réponse sur notre adresse perso (dans la rubrique Contact). Merci !');
          });
       });
