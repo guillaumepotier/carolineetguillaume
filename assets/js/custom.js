@@ -27,16 +27,11 @@
 
         // Countdown
 		$('#countdown').countdown('2014/10/04', function (event) {
-            $(this).html(event.strftime(''
-                + '<div><div>%D</div><i>Jours</i></div>'
-                + '<div><div>%H</div><i>Heures</i></div>'
-                + '<div><div>%M</div><i>Minutes</i></div>'
-                + '<div><div>%S</div><i>Secondes</i></div>'
-            ));
-    	});
+            $(this).html(event.strftime('<div><div>%D</div><i>Jours</i></div><div><div>%H</div><i>Heures</i></div><div><div>%M</div><i>Minutes</i></div><div><div>%S</div><i>Secondes</i></div>'));
+        });
 
         // Google Map
-        map = new GMaps({
+        var map = new GMaps({
             div: '#map',
             lat: 42.734755,
             lng: 9.390000,
