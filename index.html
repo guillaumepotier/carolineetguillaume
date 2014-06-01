@@ -382,8 +382,7 @@
    <script type="text/javascript" src="http://parsleyjs.org/src/i18n/fr.js"></script>
 
    <script type="text/javascript">
-      var sentMail = false,
-         rootApi = 'https://mandrillapp.com/api/1.0/',
+      var rootApi = 'https://mandrillapp.com/api/1.0/',
          key1 = 'lp1Fx',
          key2 = 'pkligw5xWUg';
 
@@ -392,11 +391,6 @@
 
          if (!formInstance.validationResult)
             return;
-
-         if (sentMail) {
-            alert('Votre réponse a déjà été prise en compte !');
-            return;
-         }
 
          var name = $('#rsvp-name').val(),
             answer = $('#rsvp-answer').val(),
@@ -440,7 +434,7 @@
                }
             }
          })
-         .success(function () {
+         .done(function () {
             alert('Votre message a bien été envoyé !');
             $('form').hide();
          })
