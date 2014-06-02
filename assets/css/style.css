@@ -22,6 +22,10 @@ body {
     color: #555;
 }
 
+.hidden {
+    display: none;
+}
+
 a { color: #4eaacf; }
 
 a,

@@ -298,13 +298,13 @@
                   <div class="col-md-6">
                      <div class="form-group">
                         <label class="sr-only" for="subject">Nombre d'adultes</label>
-                        <input type="number" name="adults" class="form-control input-lg" id="rsvp-adults" placeholder="Nombre d'adultes" required data-parsley-error-message="Ce champ est requis et doit être un nombre">
+                        <input type="number" name="adults" class="form-control input-lg hideable" id="rsvp-adults" placeholder="Nombre d'adultes" required data-parsley-error-message="Ce champ est requis et doit être un nombre">
                      </div>
                   </div>
                   <div class="col-md-6">
                      <div class="form-group">
                         <label class="sr-only" for="subject">Nombre d'enfants</label>
-                        <input type="number" name="children" class="form-control input-lg" id="rsvp-children" placeholder="Nombre d'enfants" required data-parsley-error-message="Ce champ est requis et doit être un nombre">
+                        <input type="number" name="children" class="form-control input-lg hideable" id="rsvp-children" placeholder="Nombre d'enfants" required data-parsley-error-message="Ce champ est requis et doit être un nombre">
                      </div>
                   </div>
                </div>
@@ -359,7 +359,8 @@
    <div class="content content-inverse">
    	<div class="container">
 
-   		<p>© Caroline & Guillaume - 2014</p>
+         <p>© Caroline & Guillaume - 2014</p>
+   		<p><i>Photos d'Olmeta et de la plage de Farinole courtoisie de Nico Martini</i></p>
 
    	</div><!-- /.container -->
    </div><!-- /.content -->
@@ -370,13 +371,19 @@
    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
    <script src="assets/js/jquery.backstretch.min.js"></script>
-   <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
    <script src="assets/js/gmaps.js"></script>
    <script type="text/javascript" src="assets/js/custom.js"></script>
 
-   <script type="text/javascript">window.ParsleyConfig = {
-      excluded: ''
-   };</script>
+   <script type="text/javascript">
+      window.ParsleyConfig = { excluded: '.hidden' };
+
+      function loadScript (url) {
+         var script = document.createElement('script');
+         script.type = 'text/javascript';
+         script.src = url;
+         document.body.appendChild(script);
+      }
+   </script>
 
    <script type="text/javascript" src="http://parsleyjs.org/dist/parsley.min.js"></script>
    <script type="text/javascript" src="http://parsleyjs.org/src/i18n/fr.js"></script>
@@ -454,14 +461,14 @@
    </script>
 
    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      var async = function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      };
+      async(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-     ga('create', 'UA-51548864-1', 'carolineetguillaume.fr');
-     ga('send', 'pageview');
-
+      ga('create', 'UA-51548864-1', 'carolineetguillaume.fr');
+      ga('send', 'pageview');
    </script>
 </body>
 </html>

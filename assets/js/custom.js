@@ -22,7 +22,10 @@
         // Background slideshow
         $.backstretch([
             'assets/images/corse1_1080p_light.jpg',
-            'assets/images/scrabble_1080p_light.jpg'
+            'assets/images/scrabble_1080p_light.jpg',
+            'assets/images/corse2_1080p_light.jpg',
+            'assets/images/plage1_1080p_light.jpg',
+            'assets/images/plage2_1080p_light.jpg'
         ], {duration: 5000, fade: 750});
 
         // Countdown
@@ -30,46 +33,50 @@
             $(this).html(event.strftime('<div><div>%D</div><i>Jours</i></div><div><div>%H</div><i>Heures</i></div><div><div>%M</div><i>Minutes</i></div><div><div>%S</div><i>Secondes</i></div>'));
         });
 
-        // Google Map
-        var map = new GMaps({
-            div: '#map',
-            lat: 42.734755,
-            lng: 9.390000,
-            zoom: 12
-        });
+        loadScript('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize');
 
-        map.addMarker({
-            lat: 42.769303,
-            lng:  9.372105,
-            title: 'Mairie',
-            animation: 'drop',
-            icon: 'assets/images/wedding-icon-ring-32.png',
-            infoWindow: {
-                content: '<p><strong>Mairie</strong><br/> 15h00</p>'
-            }
-        });
+        initialize = function () {
+            // Google Map
+            var map = new GMaps({
+                div: '#map',
+                lat: 42.734755,
+                lng: 9.390000,
+                zoom: 12
+            });
 
-        map.addMarker({
-            lat: 42.767106,
-            lng: 9.369454,
-            title: 'Église Saint Césaire',
-            animation: 'drop',
-            icon: 'assets/images/wedding-icon-church-32.png',
-            infoWindow: {
-                content: '<p><strong>Église Saint-Césaire</strong><br/> 15h30</p>'
-            }
-        });
+            map.addMarker({
+                lat: 42.769303,
+                lng:  9.372105,
+                title: 'Mairie',
+                animation: 'drop',
+                icon: 'assets/images/wedding-icon-ring-32.png',
+                infoWindow: {
+                    content: '<p><strong>Mairie</strong><br/> 15h00</p>'
+                }
+            });
 
-        map.addMarker({
-            lat: 42.736121,
-            lng: 9.345751,
-            title: 'L\'Ambada',
-            animation: 'drop',
-            icon: 'assets/images/champagne-icon-32.png',
-            infoWindow: {
-                content: '<p><strong>L\'Ambada</strong><br/> 19h00</p>'
-            }
-        });
+            map.addMarker({
+                lat: 42.767106,
+                lng: 9.369454,
+                title: 'Église Saint Césaire',
+                animation: 'drop',
+                icon: 'assets/images/wedding-icon-church-32.png',
+                infoWindow: {
+                    content: '<p><strong>Église Saint-Césaire</strong><br/> 15h30</p>'
+                }
+            });
+
+            map.addMarker({
+                lat: 42.736121,
+                lng: 9.345751,
+                title: 'L\'Ambada',
+                animation: 'drop',
+                icon: 'assets/images/champagne-icon-32.png',
+                infoWindow: {
+                    content: '<p><strong>L\'Ambada</strong><br/> 19h00</p>'
+                }
+            });
+        };
 	});
 
     /*
@@ -130,11 +137,13 @@
 
             hidden.val($(this).val());
             $(this).addClass('active');
-          });
 
-          if (button.val() === hidden.val()) {
-            button.addClass('active');
-          }
+            if ($(this).val() === 'no') {
+                $('.hideable').addClass('hidden');
+            } else {
+                $('.hideable').removeClass('hidden');
+            }
+          });
         });
       });
     });
