@@ -147,11 +147,18 @@
             this.finalDate = parseDateString(value);
         },
         update: function() {
+
             if (this.$el.closest("html").length === 0) {
                 this.remove();
                 return;
             }
-            this.totalSecsLeft = this.finalDate.valueOf() - new Date().valueOf();
+
+            console.log('test');
+            if (new Date() > this.finalDate)
+                this.totalSecsLeft = new Date().valueOf() - this.finalDate.valueOf();
+            else
+                this.totalSecsLeft = this.finalDate.valueOf() - new Date().valueOf();
+
             this.totalSecsLeft = Math.ceil(this.totalSecsLeft / 1e3);
             this.totalSecsLeft = this.totalSecsLeft < 0 ? 0 : this.totalSecsLeft;
             this.offset = {
@@ -180,6 +187,7 @@
         }
     });
     $.fn.countdown = function() {
+        console.log('hello')
         var argumentsArray = Array.prototype.slice.call(arguments, 0);
         return this.each(function() {
             var instanceNumber = $(this).data("countdown-instance");

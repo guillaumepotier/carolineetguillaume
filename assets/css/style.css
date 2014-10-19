@@ -281,6 +281,7 @@ nav a:focus { color: #fff; }
 
 #map {
     height: 350px;
+    background: url('../../assets/images/plan.png') no-repeat 100% 100%;
 }
 
 /* ---------------------------------------------- /*
