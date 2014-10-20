@@ -32,7 +32,6 @@
         ], {duration: 5000, fade: 750});
 
         // Countdown
-        console.log('avant');
 		$('#countdown').countdown('2014/10/04 15:30:00', function (event) {
             $(this).html(event.strftime('<div><div>%D</div><i>Jours</i></div><div><div>%H</div><i>Heures</i></div><div><div>%M</div><i>Minutes</i></div><div><div>%S</div><i>Secondes</i></div>'));
         });

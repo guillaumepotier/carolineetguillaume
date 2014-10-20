@@ -153,7 +153,6 @@
                 return;
             }
 
-            console.log('test');
             if (new Date() > this.finalDate)
                 this.totalSecsLeft = new Date().valueOf() - this.finalDate.valueOf();
             else
@@ -187,7 +186,6 @@
         }
     });
     $.fn.countdown = function() {
-        console.log('hello')
         var argumentsArray = Array.prototype.slice.call(arguments, 0);
         return this.each(function() {
             var instanceNumber = $(this).data("countdown-instance");
