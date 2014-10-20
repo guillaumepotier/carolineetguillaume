@@ -21,11 +21,14 @@
 
         // Background slideshow
         $.backstretch([
-            'assets/images/corse1_1080p_light.jpg',
-            'assets/images/scrabble_1080p_light.jpg',
-            'assets/images/corse2_1080p_light.jpg',
-            'assets/images/plage1_1080p_light.jpg',
-            'assets/images/plage2_1080p_light.jpg'
+            'assets/images/tom1.jpg',
+            'assets/images/tom2.jpg',
+            'assets/images/tom3.jpg'
+            // 'assets/images/corse1_1080p_light.jpg',
+            // 'assets/images/scrabble_1080p_light.jpg',
+            // 'assets/images/corse2_1080p_light.jpg',
+            // 'assets/images/plage1_1080p_light.jpg',
+            // 'assets/images/plage2_1080p_light.jpg'
         ], {duration: 5000, fade: 750});
 
         // Countdown
